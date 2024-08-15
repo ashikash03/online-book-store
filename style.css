@@ -1,0 +1,478 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #F3F7EC;
+    font-size: calc(0.65em + .05vw);
+}
+
+/* First Navigation */
+#first_navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+
+.first-nav-brand img {
+    width: 100px;
+}
+
+.first-nav-toggler {
+    border: none;
+}
+
+.first-nav-links {
+    justify-content: flex-end;
+}
+
+.first-nav-link {
+    color: #212529;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.first-nav-link:hover {
+    color: #E88D67;
+    text-decoration: none;
+}
+
+/* Second Navigation */
+#second_navbar {
+    background-color: #E88D67;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-nav-links {
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.second-nav-link {
+    color: white;
+}
+
+.second-nav-link:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.second-dropdown-menu {
+    background-color: #f8f9fa;
+}
+
+.second-dropdown-item {
+    color: #000;
+}
+
+.second-dropdown-item:hover {
+    background-color: #E88D67;
+    color: white;
+}
+
+#second_navbar .dropdown-toggle::after {
+    display: none;
+}
+
+#second_navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Prevent any extra margin */
+}
+
+#second_navbar .dropdown-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+.lead, .display-4{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    
+}
+.display-4{
+    color: #006989;
+}
+.lead{
+    color:#005C78;
+}
+/* Featured Books */
+/* General container for books */
+#featured-books .text-center{
+    font-family: 'Playfair Display', serif;
+    color:#2C6B4F;
+
+  
+}
+.col-lg-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add space between rows */
+}
+
+/* Book styling */
+.book {
+    position: relative;
+    width: 320px; /* Width of the book, adjust this based on the image size */
+    height: 480px; /* Height of the book, adjust to match the image aspect ratio */
+    margin: 15px 0;
+    transition: opacity 0.3s ease-in-out;
+}
+/* Hover on a single book hides the others */
+.book:hover ~ .col-lg-4 .book {
+    opacity: 0.2;
+}
+
+/* Book cover styling with image fit */
+.book > div {
+    height: 450px; /* Adjust this height according to your design */
+    width: 100%; /* Set width to 100% of the book container */
+    overflow: hidden; /* Hide any overflow from the image */
+    background-color: #006989;
+    transform: scale(0.9);
+    border-radius: 6px;
+    transform-origin: left;
+}
+
+/* Styling for the book cover */
+.book-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #232323;
+    color: white;
+    transition: transform 2s;
+}
+
+
+/* Make sure the image fits inside the book cover */
+.book-cover img {
+    width: 100%; /* Make the image take up the full width */
+    height: 100%; /* Make the image take up the full height */
+    object-fit: cover; /* Ensure the image covers the whole area without distortion */
+}
+/* Book content styling */
+.book-content {
+    transform: scale(0.9) translateY(30px);
+    background-color: white !important;
+    transition: all 2s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hide the content */
+}
+
+/* Heading and paragraph inside the book content */
+#featured-books .book-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #232323;
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+#featured-books .book-content p {
+    font-size: 14px;
+    font-weight: normal;
+    color: #444444;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0px 20px 10px 20px;
+}
+/* Price and Add to Cart section */
+.book-price-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #eee; /* Separate content from price/button */
+}
+
+.book-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #006989; /* Price color */
+}
+
+.add-to-cart {
+    background-color: #006989;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #005C78; /* Darken the button on hover */
+}
+
+/* Hover effects */
+.book-cover > div {
+    transition: opacity 0s 0.6s;
+}
+
+.book:hover > .book-cover {
+    transform: rotateY(180deg) scale(0.9);
+}
+
+.book:hover > .book-cover > div {
+    opacity: 0;
+}
+
+.book:hover > .book-content {
+    opacity: 1; /* Show the content on hover */
+    transform: scale(0.9) translateY(0);
+}
+
+.book:hover > .book-content h3,
+.book:hover > .book-content p {
+    opacity: 1;
+}
+.book:hover {
+    opacity: 1;
+}
+/* Reset opacity for all books when not hovered */
+#featured-books .row:hover .col-lg-4 .book {
+    opacity: 1;
+}
+#featured-books .row:hover .book {
+    opacity: 0.2; /* Reduce the opacity of all books when one is hovered */
+}
+#featured-books .row:hover .book:hover {
+    opacity: 1; /* Keep the hovered book fully visible */
+}
+
+
+/* General styling for the gallery section */
+#gallery {
+    background-color: #ecf7f5;
+    padding: 3rem 0;
+}
+
+#gallery h2 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0A4542;
+}
+
+/* Section title styling */
+#gallery .row h3 {
+    font-family: 'Pontano Sans', sans-serif;
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 1.5rem;
+    color: #2B4F60;
+    background-color: #b3d8d2;
+}
+
+/* Book with hover effect (Fiction section) */
+#gallery .book {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 0 auto 1rem;
+}
+
+#gallery .gloss {
+    position: absolute;
+    top: 0;
+    z-index: 200;
+    width: 20%;
+    height: 100%;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transition: all 0.5s;
+    transform: translateX(-50%) rotateY(0deg);
+    transform-origin: left center;
+}
+
+#gallery .cover {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    transition: transform 0.5s;
+    transform-origin: left center;
+    backface-visibility: hidden;
+}
+
+#gallery .description {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    border: solid 1px grey;
+    background: white;
+    transition: all 1s;
+    padding: 8%;
+    z-index: 1;
+}
+
+#gallery .description h1 {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+#gallery .book:hover .cover {
+    transform: perspective(1000px) rotateY(-80deg);
+}
+
+#gallery .book:hover .gloss {
+    transform: perspective(1000px) rotateY(-80deg) translateX(100%) scaleX(5);
+}
+
+#gallery .book:hover .description {
+    transform: translateX(20%);
+}
+
+/* Rating and Title styling */
+#gallery .book-title {
+    font-size: 1.5em; /* Reduced the size */
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#gallery .rating {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+#gallery .rating span {
+    font-size: 1.25em;
+    color: #FFD700;
+}
+
+/* Styling for price and Add to Cart button */
+#gallery .book-actions {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+#gallery .book-actions .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#gallery .book-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+}
+
+/* List Group Section Styling (Non-Fiction, Mystery, Science Fiction, Biographies) */
+#gallery h3 {
+    font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 1.75em;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#gallery .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    padding: 0.75rem 1.25rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #gallery .col-md-4 {
+        margin-bottom: 2rem;
+    }
+
+    #gallery .book {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* About Us Section */
+#about-us {
+    padding: 5rem 0;
+    background-color: #f7eced;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #006989;
+    margin-bottom: 1.5rem;
+}
+
+#about-us .lead {
+    font-size: 1 rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+#about-us img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-values {
+    margin-top: 2rem;
+    font-family: "Cormorant Garamond", serif;
+    
+}
+
+.value-item {
+    margin-bottom: 1rem;
+    
+}
+
+.value-item h4 {
+    font-size: 1.3rem;
+    color: #005C78;
+    margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.btn-primary {
+    background-color: #006989;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #005C78;
+}
+
+
+/* Contact */
+#contact form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+}
+
+footer p {
+    margin: 0;
+}

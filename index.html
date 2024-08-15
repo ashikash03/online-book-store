@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Calistoga&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Kalnia+Glaze:wght@100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+        
+</head>
+
+<body>
+    <!-- First Navigation -->
+    <nav class="navbar navbar-expand-lg" id="first_navbar">
+        <div class="container">
+            <a class="navbar-brand first-nav-brand" href="#"><img src="./assets/logo.png" alt="" width="40%"></a>
+            <button class="navbar-toggler first-nav-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto first-nav-links">
+                    <li class="nav-item"><a class="nav-link first-nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link first-nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link first-nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link first-nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Second Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="second_navbar">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav second-nav-links">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-nav-link" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Fiction
+                        </a>
+                        <ul class="dropdown-menu second-dropdown-menu">
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-nav-link" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Non-Fiction
+                        </a>
+                        <ul class="dropdown-menu second-dropdown-menu">
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-nav-link" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Mystery
+                        </a>
+                        <ul class="dropdown-menu second-dropdown-menu">
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-nav-link" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Science-Fiction
+                        </a>
+                        <ul class="dropdown-menu second-dropdown-menu">
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-nav-link" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Biographies
+                        </a>
+                        <ul class="dropdown-menu second-dropdown-menu">
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div class="slider mobilehide mobilehidden mt-1">
+        <div id="carouselExampleIndicators" class="carousel carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <a href="https://www.bookswagon.com/promo-best-seller/box-sets/389DA2389287" title="Holiday Banner">
+                        <img class="d-block w-100" src="https://www.bookswagon.com/bannerimages/31_inr.jpg?v=1.4"
+                            alt="Holiday Banner">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.bookswagon.com/promo-best-seller/minimum-40-off/20E06FE2A5BC"
+                        title="Upto 55% off">
+                        <img class="d-block w-100" src="https://www.bookswagon.com/bannerimages/80_inr.jpg?v=5.4"
+                            alt="Upto 55% off">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.bookswagon.com/promo-best-seller/upto-45-off/34D89429CCC4"
+                        title="Upto 45% off">
+                        <img class="d-block w-100" src="https://www.bookswagon.com/bannerimages/79_inr.jpg?v=5.4"
+                            alt="Upto 45% off">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.bookswagon.com/search-books/trinity-college-london" title="Trinity Books">
+                        <img class="d-block w-100" src="https://www.bookswagon.com/bannerimages/83_inr.jpg?v=5.4"
+                            alt="Trinity Books">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.bookswagon.com/search-books/children-books" title="Children Books">
+                        <img class="d-block w-100" src="https://www.bookswagon.com/bannerimages/84_inr.jpg?v=5.4"
+                            alt="Children Books">
+                    </a>
+                </div>
+                <div class="carousel-item active">
+                    <a href="https://www.bookswagon.com/promo/manga-mania-best-seller/9B7R9K3R2W" title="Manga Banner">
+                        <img class="d-block w-100" src="https://www.bookswagon.com/bannerimages/81_inr.jpg?v=5.4"
+                            alt="Manga Banner">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.bookswagon.com/search-books/penguin/filter?sid=538420" title="Penguin">
+                        <img class="d-block w-100" src="https://www.bookswagon.com/bannerimages/85_inr.jpg?v=5.4"
+                            alt="Penguin">
+                    </a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    </section>
+    <div class="container text-center my-3">
+        <h1 class="display-4">Welcome to Our Book Gallery</h1>
+        <p class="lead">Expore And Discover Worlds Between the Covers!</p>
+    </div>
+
+    <!-- Featured Books Section -->
+    <section id="featured-books" class="py-5" style="background-color:#f0ecf7;">
+        <div class="container">
+            <h2 class="text-center mb-4">ꕀ Featured Books ꕀ</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="book">
+                        <div class="book-cover">
+                            <div>
+                                <img src="https://m.media-amazon.com/images/I/81e+mSqZvnL._AC_UF1000,1000_QL80_.jpg"
+                                    class="book-image" alt="Book Title">
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>Where the Crawdads Sing</h3>
+                            <p>Where the Crawdads Sing is a 2018 coming-of-age murder mystery novel by American
+                                zoologist Delia Owens. The story follows two timelines that slowly intertwine. The first
+                                timeline describes the life and adventures of a young girl named Kya as she grows up
+                                isolated in the marshes of North Carolina. The second timeline follows an investigation
+                                into the apparent murder of Chase Andrews, a local celebrity of Barkley Cove, a
+                                fictional coastal town of North Carolina.</p>
+                            <!-- Price and Add to Cart button -->
+                            <div class="book-price-btn">
+                                <p class="book-price">$14.99</p>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="book">
+                        <div class="book-cover">
+                            <div>
+                                <img src="https://m.media-amazon.com/images/I/81J6APjwxlL._AC_UF1000,1000_QL80_.jpg"
+                                    class="book-image" alt="Book Title">
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>The Midnight Library</h3>
+                            <p>The Midnight Library is a fantasy novel by Matt Haig, published on 13 August 2020 by
+                                Canongate Books. It was abridged and broadcast on BBC Radio 4 over ten episodes in
+                                December 2020.
+                                The novel follows a 35-year-old British woman unhappy in her dead-end life who is given
+                                the opportunity to experience lives she might have had if she had made different
+                                choices.</p>
+                            <!-- Price and Add to Cart button -->
+                            <div class="book-price-btn">
+                                <p class="book-price">$14.99</p>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="book">
+                        <div class="book-cover">
+                            <div>
+                                <img src="https://m.media-amazon.com/images/I/81ICvbFe2+L._AC_UF1000,1000_QL80_.jpg"
+                                    class="book-image" alt="Book Title">
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>The Vanishing Half</h3>
+                            <p>The Vanishing Half is a historical fiction novel by American author Brit Bennett.
+                                It is her second novel and was published by Riverhead Books in 2020. The novel
+                                debuted at number one on The New York Times fiction best-seller list. HBO
+                                acquired the rights to develop a limited series with Bennett as executive
+                                producer. The Vanishing Half garnered acclaim from book critics, and Emily
+                                Temple of Literary Hub noted that in 2020 it was the book most frequently listed
+                                among the year's best, making 25 lists.</p>
+                            <!-- Price and Add to Cart button -->
+                            <div class="book-price-btn">
+                                <p class="book-price">$14.99</p>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="book">
+                        <div class="book-cover">
+                            <div>
+                                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRT8nTAwMcM0IJlyvBV1ruhY7VwThVdJLq7BBtYMqrSFKbNNR4U"
+                                    class="book-image" alt="Book Title">
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>Atomic Habits</h3>
+                            <p>Atomic Habits by James Clear is a comprehensive, practical guide on how to change your
+                                habits and get 1% better every day. Using a framework called the Four Laws of Behavior
+                                Change, Atomic Habits teaches readers a simple set of rules for creating good habits and
+                                breaking bad ones. Read the full summary to glean 3 key lessons from Atomic Habits,
+                                learn how to build a habit in 4 simple steps, and get a handy reference guide for the
+                                strategies recommended throughout the book.</p>
+                            <!-- Price and Add to Cart button -->
+                            <div class="book-price-btn">
+                                <p class="book-price">$14.99</p>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="book">
+                        <div class="book-cover">
+                            <div>
+                                <img src="https://m.media-amazon.com/images/I/71-4MkLN5jL._AC_UF1000,1000_QL80_.jpg"
+                                    class="book-image" alt="Book Title">
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>Educated (memoir)</h3>
+                            <p>Educated is a 2018 memoir by the American author Tara Westover. Westover recounts
+                                overcoming her survivalist Mormon family in order to go to college, and emphasizes the
+                                importance of education in enlarging her world. She details her journey from her
+                                isolated life in the mountains of Idaho to completing a PhD program in history at
+                                Cambridge University. She started college at the age of 17 having had no formal
+                                education. She explores her struggle to reconcile her desire to learn with the world she
+                                inhabited with her father.</p>
+                            <!-- Price and Add to Cart button -->
+                            <div class="book-price-btn">
+                                <p class="book-price">$14.99</p>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="book">
+                        <div class="book-cover">
+                            <div>
+                                <img src="https://m.media-amazon.com/images/I/81gTwYAhU7L._AC_UF1000,1000_QL80_.jpg"
+                                    class="book-image" alt="Book Title">
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>The Power of Your Subconscious Mind</h3>
+                            <p>The Power of Your Subconscious Mind, a bestseller since 1963, offers spiritual self-help techniques to improve relationships, finances, and physical well-being. Dr. Joseph Murphy explains life events are influenced by conscious and subconscious minds.</p>
+                            <!-- Price and Add to Cart button -->
+                            <div class="book-price-btn">
+                                <p class="book-price">$14.99</p>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">ꕀ Gallery ꕀ</h2>
+            
+            <div class="row">
+                <h3 class="text-center mb-5">Fiction</h3>
+                <!-- Fiction Section -->
+                <div class="col-md-4">
+                    <div id="The Handmaid's Tale" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/1/18/TheHandmaidsTale%281stEd%29.jpg/220px-TheHandmaidsTale%281stEd%29.jpg"
+                            alt="The Handmaid's Tale">
+                        <div class="description">
+                            <h1>The Handmaid's Tale</h1>
+                            <hr>
+                            <p>In the Republic of Gilead, far-right ideals have been carried to extremes in the
+                                monotheocratic government. Women are strictly controlled, unable to have jobs or money
+                                and
+                                assigned to various classes. The tale is told by Offred, a Handmaid who recalls the past
+                                and
+                                tells how the chilling society came to be.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">The Handmaid's Tale</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="To Kill a Mockingbird" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/To_Kill_a_Mockingbird_%281963_US_theatrical_poster%29.jpg">
+                        <div class="description">
+                            <h1>To Kill a Mockingbird</h1>
+                            <hr>
+                            <p>"To Kill A Mockingbird" is a beloved American literary masterpiece, capturing the essence of human behavior through its compassionate, dramatic, and deeply moving narrative.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">To Kill a Mockingbird</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="1984" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://m.media-amazon.com/images/I/81StSOpmkjL._AC_UF1000,1000_QL80_.jpg">
+                        <div class="description">
+                            <h1>1984</h1>
+                            <hr>
+                            <p>George Orwell's 1984 is a classic dystopian novel that explores rebellion, imprisonment, and the consequences of war and freedom. The story follows a man's quest for a forbidden love, highlighting the destruction of truth, individuality, and power in a world ruled by warring states.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">To Kill a Mockingbird</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Non-Fiction Section -->
+            <div class="row">
+                <h3 class="text-center mt-5 mb-5">Non-Fiction</h3>
+                <div class="col-md-4">
+                    <div id="Sapiens" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://m.media-amazon.com/images/I/713jIoMO3UL._AC_UF1000,1000_QL80_.jpg"
+                            alt="The Handmaid's Tale">
+                        <div class="description">
+                            <h1>Sapiens: A Brief History of Humankind</h1>
+                            <hr>
+                            <p>Dr. Yuval Noah Harari's Sapiens explores humanity's creation and evolution, integrating history and science to challenge accepted narratives and connect past developments with contemporary concerns, emphasizing human behavior and natural selection impact.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">Sapiens</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id=“Becoming”  class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://m.media-amazon.com/images/I/81KGjsBXQ7L._AC_UF1000,1000_QL80_.jpg">
+                        <div class="description">
+                            <h1>“Becoming” by Michelle Obama</h1>
+                            <hr>
+                            <p>Michelle Obama, the first African American to serve as First Lady, has become an iconic and compelling figure in American history. Her memoir, Becoming, chronicles her life, from childhood to her presidency, and offers a personal reckoning of her life, inspiring others.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">Becoming</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="The Immortal Life of Henrietta Lacks" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1330848959i/7875361.jpg">
+                        <div class="description">
+                            <h1>The Immortal Life of Henrietta Lacks</h1>
+                            <hr>
+                            <p>Henrietta Lacks, also known as HeLa, was a Southern tobacco farmer who had her cells taken without her knowledge, becoming a crucial tool in medicine. Despite their importance, her family never saw profits. Rebecca Skloot's The Immortal Life of Henrietta Lacks highlights the beauty and drama of scientific discovery.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">The Immortal Life of Henrietta Lacks</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Mystery Section -->
+            <div class="row">
+                <h3 class="text-center mt-5 mb-5">Mystery</h3>
+                <div class="col-md-4">
+                    <div id="Gone Girl" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554086139i/19288043.jpg"
+                            alt="The Handmaid's Tale">
+                        <div class="description">
+                            <h1>Gone Girl</h1>
+                            <hr>
+                            <p>Nick Dunne investigates his wife Amy's disappearance on their fifth anniversary, despite suspicions and a police investigation. Amy's friends reveal she was afraid of him, leading to persistent phone calls.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">Gone Girl</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id=“The Girl with the Dragon Tattoo”  class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1684638853i/2429135.jpg">
+                        <div class="description">
+                            <h1>The Girl with the Dragon Tattoo</h1>
+                            <hr>
+                            <p>Harriet Vanger's disappearance leads her uncle to hire Mikael Blomkvist and Lisbeth Salander to uncover a complex mystery involving murder, family saga, love story, and financial intrigue.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">The Girl with the Dragon Tattoo</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="The Silent Patient" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668782119i/40097951.jpg">
+                        <div class="description">
+                            <h1>The Silent Patient</h1>
+                            <hr>
+                            <p>Alicia Berenson, a famous painter, commits a domestic tragedy after shooting her husband, Gabriel. The mystery becomes a sensation, and her art price rises. Theo Faber, a criminal psychotherapist, works with Alicia to uncover her motives.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">The Silent Patient</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Science Fiction Section -->
+            <div class="row">
+                <h3 class="text-center mt-5 mb-5">Science Fiction</h3>
+                <div class="col-md-4">
+                    <div id="Dune" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg"
+                            alt="The Handmaid's Tale">
+                        <div class="description">
+                            <h1>Dune</h1>
+                            <hr>
+                            <p>Dune is a story set on the desert planet Arrakis, narrated by the boy Paul Atreides, heir to a noble family. The only valuable possession is melange, a drug that extends life and enhances consciousness. When House Atreides is betrayed, Paul embarks on a journey towards a destiny greater than his imagination, becoming Muad'Dib.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">Dune</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="Neuromancer"  class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554437249i/6088007.jpg">
+                        <div class="description">
+                            <h1>Neuromancer</h1>
+                            <hr>
+                            <p>Neuromancer is a groundbreaking cyberpunk science fiction masterpiece, featuring Henry Dorsett Case as a data-thief battling powerful artificial intelligence. The novel, a winner of Hugo, Nebula, and Philip K. Dick Awards, challenges our assumptions about technology and ourselves.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">Neuromancer</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="The Martian" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://m.media-amazon.com/images/I/51QimqeXMXL._AC_UF1000,1000_QL80_.jpg">
+                        <div class="description">
+                            <h1>The Martian</h1>
+                            <hr>
+                            <p>Mark Watney, the first person to walk on Mars, faces death after a dust storm. Despite the odds, he remains determined to overcome obstacles with his ingenuity and engineering skills..</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">The Martian</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Biographies Section -->
+            <div class="row">
+                <h3 class="text-center mt-5 mb-5">Biographies</h3>
+                <div class="col-md-4">
+                    <div id="Steve Jobs" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1511288482i/11084145.jpg"
+                            alt="The Handmaid's Tale">
+                        <div class="description">
+                            <h1>Steve Jobs</h1>
+                            <hr>
+                            <p>Walter Isaacson's biography of Steve Jobs, based on interviews with him and over 100 others, is a captivating account of his life and the revolutions he brought to six industries. It offers lessons about innovation, character, leadership, and values, and serves as inspiration for the movie.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">Steve Jobs</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="The Diary of a Young Girl"  class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://cdn.penguin.co.in/wp-content/uploads/2022/06/9780143455257.jpg">
+                        <div class="description">
+                            <h1>The Diary of a Young Girl</h1>
+                            <hr>
+                            <p>Anne Frank's diary, discovered in her attic, is a world classic reflecting the horrors of war and the human spirit. It offers a commentary on courage and frailty during the Holocaust.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">The Diary of a Young Girl</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="Leonardo da Vinci" class="book">
+                        <div class="gloss"></div>
+                        <img class="cover"
+                            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1523543570i/34684622.jpg">
+                        <div class="description">
+                            <h1>Leonardo da Vinci</h1>
+                            <hr>
+                            <p>Walter Isaacson connects Leonardo's art to science, highlighting his genius based on personal skills like curiosity and imagination. He also explores his scientific interests, making Leonardo history's most creative genius.</p>
+                        </div>
+
+                    </div>
+                    <h1 class="book-title">Leonardo da Vinci</h1>
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                    <!-- Price tag and Add to Cart button -->
+                    <div class="book-actions text-center">
+                        <p class="price">$10.99</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+    </section>
+
+
+   <!-- About Us Section -->
+<section id="about-us" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://ca-times.brightspotcdn.com/dims4/default/1603ad5/2147483647/strip/true/crop/2048x1365+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F4f%2F14%2F25d67376f4e5b5dd34e7da9b9180%2Fla-1856203-fi-0428-himi-century-books-jlc-03-jpg-20140516" alt="About Us" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title mb-4">About Us</h2>
+                <p class="lead">Welcome to <strong>Book Haven</strong>, your online destination for discovering, reading, and sharing books. Our passion for literature drives us to curate a diverse selection of books for every reader, no matter your taste or genre preferences.
+                Founded by book enthusiasts, we aim to provide a seamless and enjoyable shopping experience for all your reading needs. From fiction to non-fiction, mystery to biographies, we believe that every book tells a story worth sharing.</p>
+                <div class="about-values">
+                    <div class="value-item">
+                        <h4>Our Mission</h4>
+                        <p>To bring the joy of reading to every corner of the world, one book at a time.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>What We Offer</h4>
+                        <p>An expansive collection of books, personalized recommendations, and a community for book lovers.</p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary mt-3">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h5>Our Location</h5>
+                    <p>123 Bookstore Lane, Fiction City, USA</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8352513682624!2d144.96305841531956!3d-37.81410797975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e33!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1612437897538!5m2!1sen!2sin"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-light text-center">
+        <p>&copy; 2024 Book Gallery. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
