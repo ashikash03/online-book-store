@@ -15,29 +15,32 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Calistoga&family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Kalnia+Glaze:wght@100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
 </head>
 
 <body>
     <!-- First Navigation -->
-    <nav class="navbar navbar-expand-lg" id="first_navbar">
-        <div class="container">
-            <a class="navbar-brand first-nav-brand" href="#"><img src="./assets/logo.png" alt="" width="40%"></a>
-            <button class="navbar-toggler first-nav-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto first-nav-links">
-                    <li class="nav-item"><a class="nav-link first-nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link first-nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link first-nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link first-nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg" id="first_navbar">
+    <div class="container">
+        <a class="navbar-brand first-nav-brand" href="#"><img src="./assets/logo.png" alt="" width="40%"></a>
+        <button class="navbar-toggler first-nav-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto first-nav-links">
+                <li class="nav-item"><a class="nav-link first-nav-link" href="#home"><i class="fa-solid fa-house"></i><span class="nav-text">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link first-nav-link" href="#gallery"><i class="fa-solid fa-book"></i><span class="nav-text">Gallery</span></a></li>
+                <li class="nav-item"><a class="nav-link first-nav-link" href="#about"><i class="fa-solid fa-circle-info"></i><span class="nav-text">About</span></a></li>
+                <li class="nav-item"><a class="nav-link first-nav-link" href="#contact"><i class="fa-regular fa-address-book"></i><span class="nav-text">Contact</span></a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Second Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top" id="second_navbar">
@@ -50,9 +53,9 @@
                             Fiction
                         </a>
                         <ul class="dropdown-menu second-dropdown-menu">
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#The Handmaid's Tale">The Handmaid's Tale</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#To Kill a Mockingbird">To Kill a Mockingbird</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#1984">1984</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -61,9 +64,9 @@
                             Non-Fiction
                         </a>
                         <ul class="dropdown-menu second-dropdown-menu">
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#Sapiens">Sapiens: A Brief History of Humankind</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#Becoming">Becoming</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#The Immortal Life of Henrietta Lacks">The Immortal Life of Henrietta Lacks</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -72,9 +75,9 @@
                             Mystery
                         </a>
                         <ul class="dropdown-menu second-dropdown-menu">
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#Gone Girl">Gone Girl</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#The Girl with the Dragon Tattoo">The Girl with the Dragon Tattoo</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#The Silent Patient">The Silent Patient</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -83,9 +86,9 @@
                             Science-Fiction
                         </a>
                         <ul class="dropdown-menu second-dropdown-menu">
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#Dune">Dune</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#Neuromancer">Neuromancer</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#The Martian">The Martian</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -94,9 +97,9 @@
                             Biographies
                         </a>
                         <ul class="dropdown-menu second-dropdown-menu">
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item second-dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#Steve Jobs">Steve Jobs</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#The Diary of a Young Girl">The Diary of a Young Girl</a></li>
+                            <li><a class="dropdown-item second-dropdown-item" href="#Leonardo da Vinci">Leonardo da Vinci</a></li>
                         </ul>
                     </li>
                 </ul>
