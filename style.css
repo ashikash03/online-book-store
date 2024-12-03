@@ -302,7 +302,7 @@ body {
 }
 
 .book:hover > .book-cover {
-    transform: rotateY(180deg) scale(0.9);
+    transform: rotateY(110deg) scale(0.9);
 }
 
 .book:hover > .book-cover > div {
@@ -514,9 +514,12 @@ body {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
+    .col-md-4{
+        margin-bottom: 15px;
+    }
     #gallery .book {
-        width: 220px;
-        height: 320px; /* Adjust size for tablets */
+        width: 260px;
+        height: 390px; /* Adjust size for tablets */
     }
 
     #gallery .book-title {
